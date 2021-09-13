@@ -1,7 +1,8 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import Data from './data.js';
 
 function Content () {
+
   let [shoes, shoes변경] = useState(Data);
 
   return (

@@ -4,18 +4,22 @@ import { Navbar, Container, Nav } from 'react-bootstrap';
 import './App.css';
 import Content from './content.js';
 import Detail from './Detail.js';
+import Data from './data.js';
 
 import { Link, Route, Switch } from 'react-router-dom';
 
 function App() {
+
+  let [shoes, shoes변경] = useState(Data);
+
   return (
     <div className="App">
       <Navbar bg="dark" variant="dark">
         <Container>
         <Navbar.Brand href="#home">Edit Shop</Navbar.Brand>
         <Nav className="me-auto">
-          <Nav.Link> <Link to='/'>Home</Link></Nav.Link>
-          <Nav.Link> <Link to='/detail'>Detail</Link></Nav.Link>
+          <Nav.Link as={Link} to='/'>Home</Nav.Link>
+          <Nav.Link as={Link} to='/detail'>Detail</Nav.Link>
           <Nav.Link href="#pricing">Pricing</Nav.Link>
         </Nav>
         </Container>
@@ -40,8 +44,8 @@ function App() {
       
       
       
-      <Route path='/detail'>
-        <Detail/>
+      <Route path='/detail/:id'>
+        <Detail shoes={shoes}/>
       </Route>
 
       <Route path='/:id'>
