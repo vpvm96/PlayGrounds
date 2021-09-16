@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Data from './data.js';
+import axios from 'axios';
 
 function Content () {
 
@@ -18,6 +19,18 @@ function Content () {
             );
           })} 
       </div>
+      
+      <button className ='btn btn-primary' onClick={()=>{
+        axios.get('https://codingapple1.github.io/shop/data2.json')
+        .then((result)=>{ 
+          console.log(result.data[0].url)
+          shoes변경( [...shoes, ...result.data ] );
+        })
+        .catch(()=>{        
+          console.log('실패했어요')
+        })      
+        }}>더보기</button>
+
   </div>
   );
 };

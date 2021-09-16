@@ -39,20 +39,18 @@ function App() {
       <div>      
       <Content/>
       </div>
-      
+
       </Route>
-      
-      
-      
+    
       <Route path='/detail/:id'>
         <Detail shoes={shoes}/>
       </Route>
 
       <Route path='/:id'>
-        <div>아무거나적었을때 이거 보여주셈</div>
+        <div>아무거나적었을때 이거 보여줘</div>
       </Route>
 
-    </Switch>
+      </Switch>
       
     </div>    
   );
