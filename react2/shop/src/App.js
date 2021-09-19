@@ -5,12 +5,14 @@ import './App.css';
 import Content from './content.js';
 import Detail from './Detail.js';
 import Data from './data.js';
-
 import { Link, Route, Switch } from 'react-router-dom';
+
+export let 재고context = React.createContext();
 
 function App() {
 
   let [shoes, shoes변경] = useState(Data);
+  let [재고, 재고변경] = useState([10, 11, 12]);
 
   return (
     <div className="App">
@@ -36,18 +38,22 @@ function App() {
         </p>
       </div>
 
-      <div>      
-      <Content/>
+      <div>
+        <재고context.Provider value={재고}>
+        <Content shoes={shoes} shoes변경={shoes변경} 재고={재고}/>
+        </재고context.Provider>
       </div>
 
       </Route>
     
       <Route path='/detail/:id'>
-        <Detail shoes={shoes}/>
+        <재고context.Provider value={재고}>
+        <Detail shoes={shoes} 재고={재고} 재고변경={재고변경}/>
+        </재고context.Provider>
       </Route>
 
       <Route path='/:id'>
-        <div>아무거나적었을때 이거 보여줘</div>
+        <div>아무거나</div>
       </Route>
 
       </Switch>
