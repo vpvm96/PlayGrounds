@@ -16,7 +16,7 @@ function Content (props) {
           {shoes.map((sho, i) => {
             return(
               <div className ='col-md-4' key={i}>
-                <img src= { 'https://codingapple1.github.io/shop/shoes' + (i + 1) + '.jpg' } width ='100%'></img>
+                <img src= { 'https://codingapple1.github.io/shop/shoes' + (i + 1) + '.jpg' } width ='100%'/>
                 <h4> { sho.title }</h4>
                 <p>{ sho.content } & { sho.price }</p>
                 <Test></Test>

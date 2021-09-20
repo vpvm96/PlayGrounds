@@ -51,7 +51,7 @@ function Detail(props) {
 
       <div className='row'>
         <div className='col-md-6'>
-          <img src='https://codingapple1.github.io/shop/shoes1.jpg' width='100%' />
+          <img src='https://codingapple1.github.io/shop/shoes1.jpg' width='100%'/>
         </div>
         <div className='col-md-6 mt-4'>
           <h4 className='pt-5'>{찾은상품.title}</h4>
@@ -86,7 +86,7 @@ function Detail(props) {
         </Nav.Item>
       </Nav>
       
-      <CSSTransition in={스위치} className='wow' timeout={500}>
+      <CSSTransition in={스위치} classNames='wow' timeout={500}>
         <TabContent 누른탭={누른탭} 스위치변경={스위치변경}/>
       </CSSTransition>
     </div>

@@ -5,6 +5,7 @@ import './App.css';
 import Content from './content.js';
 import Detail from './Detail.js';
 import Data from './data.js';
+import Cart from './Cart.js';
 import { Link, Route, Switch } from 'react-router-dom';
 
 export let 재고context = React.createContext();
@@ -22,7 +23,7 @@ function App() {
         <Nav className="me-auto">
           <Nav.Link as={Link} to='/'>Home</Nav.Link>
           <Nav.Link as={Link} to='/detail'>Detail</Nav.Link>
-          <Nav.Link href="#pricing">Pricing</Nav.Link>
+          <Nav.Link as={Link} to='/cart'>Cart</Nav.Link>
         </Nav>
         </Container>
       </Navbar>
@@ -50,6 +51,10 @@ function App() {
         <재고context.Provider value={재고}>
         <Detail shoes={shoes} 재고={재고} 재고변경={재고변경}/>
         </재고context.Provider>
+      </Route>
+
+      <Route path='/cart'>
+        <Cart></Cart>
       </Route>
 
       <Route path='/:id'>
