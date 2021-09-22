@@ -3,10 +3,12 @@ import { useHistory, useParams } from 'react-router-dom';
 import { CSSTransition } from "react-transition-group"
 import { Nav } from 'react-bootstrap';
 import { 재고context } from './App';
+import { connect } from 'react-redux';
 
 import styled from 'styled-components'; // 편리성이 적음 사용하고싶으면 사용
 
 import './Detail.css';
+
 
 let 박스 = styled.div`
   padding-top: 30px;
@@ -59,21 +61,20 @@ function Detail(props) {
           <p>{찾은상품.price}원</p>
           <Info 재고={props.재고} />
           <button
-            className='btn btn-danger'
-            onClick={() => {
-              props.재고변경([9, 10, 11]);
-            }}
-          >
-            주문하기
-          </button>
+            className='btn btn-danger'onClick={() => {
+
+              props.재고변경([9, 11, 12]);
+              props.dispatch({type : '항목추가', payload : { id : 찾은상품.id, name : 찾은상품.title, quan : 1} });
+              history.push('/cart');
+
+          }}>주문하기</button>
+          &nbsp;
           <button
-            className='btn btn-danger'
-            onClick={() => {
+            className='btn btn-danger'onClick={() => {
+          
               history.push('/');
-            }}
-          >
-            뒤로가기
-          </button>
+          
+          }}>뒤로가기</button>
         </div>
       </div>
 
@@ -113,4 +114,13 @@ function Info(props) {
   return <p>재고 : {props.재고[0]}</p>;
 }
 
-export default Detail;
+
+function state를props화(state) {
+  console.log(state);
+  return {
+    state : state.reducer,
+    alert열기 : state.reducer2
+  }
+}
+
+export default connect(state를props화)(Detail)
