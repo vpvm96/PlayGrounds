@@ -1,10 +1,10 @@
 // function, const
 
 // 도형 넓이
-let horizontal = 5 //가로
-let vertical = 3 //세로
-let base = 10 // 밑변
-let height = 15 //높이
+let horizontal = 5; //가로
+let vertical = 3; //세로
+let base = 10; // 밑변
+let height = 15; //높이
 
 const square = (horizontal,vertical) => {
     return horizontal * vertical;

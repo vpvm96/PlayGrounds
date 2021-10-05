@@ -225,3 +225,54 @@
 // }
 
 // ----------------------------------------------------------------
+
+// let arr = [8, 3, 10, 11, 1, 5, 2, 99, 81, 100];
+
+// const sort = (arr) => {
+//   for (let i = 0; i < arr.length; i++) {
+//     for(let j = i + 1; j < arr.length; i++) {
+//       let swap;
+//       if(arr[j] < arr[i]) {
+//         swap = arr[j];
+//         arr[j] = arr[i];
+//         arr[i] = swap;
+//       }
+//     }
+//   }
+//   return arr;
+// };
+// sort(arr);
+// console.log(arr);
+
+// ------------------------------------------------------------------------
+
+// let score = 100;
+
+// if (score >= 90 && score <= 100) {
+//   console.log("A");
+// }else if (socre >= 80 && score <= 89) {
+//   console.log("B");
+// }else if (socre >= 70 && score <= 79) {
+//   console.log("C");
+// }else if (socre >= 60 && score <= 69) {
+//   console.log("D");
+// }else if (score > 100) {
+//   console.log("Not");
+// }else {
+//   console.log("F");
+// }
+
+
+// let a = 2;
+
+// for (let i = 1; i <= 9; i++) {
+//   console.log(`2 x ${i} = ${a * i}`);
+// }
+
+// const gugudan = () => {
+//   for (let i = 1; i <= 9; i++) {
+//     for (let j = 1; j <= 9; j++) {
+//     }
+//   }
+//   console.log(gugudan(`${i} x ${j} = ${i * j}`));
+// }
