@@ -32,7 +32,10 @@ function Detail(props) {
     }, 2000);
   }, [alert]);
 
+  let test = props;
+
   let { id } = useParams();
+  let img = props.shoes[id].url;
   let history = useHistory();
   let 찾은상품 = props.shoes.find((x) => x.id == id);
   // let 찾은상품 = props.shoes.find(function (상품){
@@ -41,6 +44,7 @@ function Detail(props) {
 
   return (
     <div className='container'>
+      {console.log(props)}
       <박스>
         <제목 className='red'>Detail</제목>
       </박스>
@@ -53,7 +57,7 @@ function Detail(props) {
 
       <div className='row'>
         <div className='col-md-6'>
-          <img src='https://codingapple1.github.io/shop/shoes1.jpg' width='100%'/>
+          <img src={img} width='100%'/>
         </div>
         <div className='col-md-6 mt-4'>
           <h4 className='pt-5'>{찾은상품.title}</h4>
