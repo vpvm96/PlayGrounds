@@ -262,7 +262,6 @@
 //   console.log("F");
 // }
 
-
 // let a = 2;
 
 // for (let i = 1; i <= 9; i++) {
@@ -276,3 +275,160 @@
 //   }
 //   console.log(gugudan(`${i} x ${j} = ${i * j}`));
 // }
+
+// -----------------------------------------------2021-12-24
+
+// const gugudan = () => {
+//   for(let i = 1; i <= 9; i++) {
+//     for(let j = 1; j <= 9; j++) {
+//       console.log(`${i} * ${j} = ${i * j}`);
+//     }
+//   }
+// }
+
+// gugudan();
+
+// const randomNum = Math.random() * 50
+// const randomNumFloor = Math.floor(randomNum + 1)
+
+// console.log(randomNumFloor);
+
+//구구단의 짝수찾기
+// const gugudanEven = () => {
+//   for(let i = 1; i <= 9; i++) {
+//     for (let j = 1; j <= 9; j++) {
+//       if(i * j % 2 === 0) {    === 1 이면 홀수
+//         console.log(i * j);
+//       }
+//     }
+//   }
+// }
+// gugudanEven()
+
+// 구구단의 홀수 switch 문법으로 만들기
+// const gugudanOddNum = () => {
+//   for(let i = 1; i <= 9; i++) {
+//     for(let j = 1; j <=9; j++) {
+//       switch(i * j) {
+//         case `${i * j % 2 === 1}` :
+//           console.log(i * j);
+//           break;
+// }}}};
+
+// while 문법으로 구구단 만들기
+// let i = 1;
+
+// while(i <= 9) {
+//   let j = 1;
+
+//   while(j <= 9) {
+//     console.log(`${i} * ${j} = ${i * j}`)
+//     j++;
+//   }
+//   i++;
+// }
+
+// Class 문법으로
+//1. 구구단만들기
+//2. 짝수 홀수찾는 함수만들기
+
+// class Gugudan {
+//   constructor(a, b) {
+//     this.a = a;
+//     this.b = b;
+//   }
+//   gugudan() {
+//     for(let i = 1; i <= 9; i++) {
+//       for(let j = 1; j <= 9; j++) {
+//         console.log(`${i} * ${j} = ${i * j}`);
+//       }
+//     }
+//   }
+
+//   check(a) {
+//     if(a % 2 === 0) {
+//       return true;
+//     }else {
+//       return false;
+//     }
+//   }
+// }
+
+// const gugudan = new Gugudan();
+
+// if(gugudan.check(2)) {
+//   console.log(`짝수 입니다.`)
+// }else {
+//   console.log(`홀수 입니다.`)
+// }
+
+/**
+ * Calculator 라는 클래스를 만들고, 값을 5와 10을 가진 객체 생성.
+ * add, subtract, multiple, divide라는 함수를 정의한다. ( 이 때, 매개변수는 2개 )
+ * 함수 호출 결과를 받고, 사용자에게 값을 알려줍니다.
+ * 실행예시 : 더하기 : 2
+ */
+
+// class Calculator {
+//   constructor(a, b) {
+//     this.a = a;
+//     this.b = b;
+//   }
+
+//   add() {
+//     return this.a + this.b;
+//   }
+//   subtract() {
+//     return this.a - this.b;
+//   }
+//   multiply() {
+//     return this.a * this.b;
+//   }
+//   divide () {
+//     return this.a / this.b;
+//   }
+// }
+
+// const result = new Calculator(100, 55);
+
+// console.log(`+ = ${result.add()}`);
+// console.log(`- = ${result.subtract()}`);
+// console.log(`* = ${result.multiply()}`);
+// console.log(`/ = ${result.divide()}`);
+
+/**
+ * Teacher 클래스를 만들어서
+ * 점수 계산기를 만들어 보삼.
+ * 기능 : 평균계산기(학생의 점수를 받아서 평균을 계산하는것임)
+ *
+ * Student클래스는 자신의 국어, 영어, 수학 점수를 가지고 있다.
+ * 각각의 점수를 반환하는 함수를 가지고 있다.
+ */
+
+class Students {
+  constructor(korean, english, math) {
+    this.korean = korean;
+    this.english = english;
+    this.math = math;
+  }
+
+  getKorean() {
+    return this.korean;
+  }
+  getEnglish() {
+    return this.english;
+  }
+  getMath() {
+    return this.math;
+  }
+}
+
+class Teacher {
+  constructor(Students) {}
+
+  avg() {
+    return (getKorean() + getEnglish() + getMath()) / 3;
+  }
+}
+
+const subject = new Students(50, 70, 90);

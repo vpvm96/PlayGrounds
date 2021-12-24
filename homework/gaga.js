@@ -23,7 +23,7 @@ while(i <= 9) {
     console.log(i + " * " + j + " = " + i * j);
     j++;
   }
-  i++
+  i++;
 }
 
 const gugudan = () => {

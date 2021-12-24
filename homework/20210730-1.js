@@ -35,11 +35,10 @@ const count = (randomArr) => { // 갯수 세는 함수
             cnt++; // 참이면 여기
         }
     }
-
     return cnt;
 }
 
 randomNum(randomArr);
-console.log(count(randomArr));
+console.log(count(randomArr)); // error 물어보자
 // ---------------------------------------------------------------------------------------------
 

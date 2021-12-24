@@ -11,21 +11,37 @@
  */
 
 class Car {
-  constructor (oil, speed) {
+  constructor(oil, speed) {
     this.oil = oil;
     this.speed = speed;
   }
-
-
   getMove() {
-
+    switch ((oil, speed)) {
+      case `${this.oil <= 0}`:
+        console.log(`기름이 부족합니다`);
+        break;
+      case `${this.oil > 0}`:
+        this.speed += 10;
+        this.oil--;
+        console.log(`차량 속도 ${this.speed}`);
+        console.log(`현재 기름 ${this.oil}`);
+        break;
+    }
   }
 
   getBreack() {
-    
+    switch (speed) {
+      case `${this.speed > 0}`:
+        this.speed -= 10;
+        console.log(`차량 속도 ${this.speed}`);
+    }
   }
 
   getCharge() {
-
+    for (this.oil = 0; this.oil <= 100; this.oil++) console.log(`충전된 기름 ${this.oil}`);
   }
 }
+
+const status = new Car(100, 0);
+
+console.log();

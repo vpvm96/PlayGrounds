@@ -8,11 +8,6 @@ const randomNum = (randomArr) => { // 100개의 랜덤숫자 함수
     console.log(randomArr);
 }
 
-let num = (a, b) => {
-
-}
-
-
 const add = (randomArr) => { // 모든 요소의 합 함수
     let num = 0;
 
