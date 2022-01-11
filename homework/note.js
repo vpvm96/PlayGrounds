@@ -405,30 +405,66 @@
  * 각각의 점수를 반환하는 함수를 가지고 있다.
  */
 
-class Students {
-  constructor(korean, english, math) {
-    this.korean = korean;
-    this.english = english;
-    this.math = math;
-  }
+// class Students {
+//   constructor(korean, english, math) {
+//     this.korean = korean;
+//     this.english = english;
+//     this.math = math;
+//   }
 
-  getKorean() {
-    return this.korean;
-  }
-  getEnglish() {
-    return this.english;
-  }
-  getMath() {
-    return this.math;
-  }
-}
+//   getKorean() {
+//     return this.korean;
+//   }
+//   getEnglish() {
+//     return this.english;
+//   }
+//   getMath() {
+//     return this.math;
+//   }
+// }
 
-class Teacher {
-  constructor(Students) {}
+// class Teacher {
+//   constructor(Students) {}
 
-  avg() {
-    return (getKorean() + getEnglish() + getMath()) / 3;
-  }
-}
+//   avg() {
+//     return (getKorean() + getEnglish() + getMath()) / 3;
+//   }
+// }
 
-const subject = new Students(50, 70, 90);
+// const subject = new Students(50, 70, 90);
+
+// const arr = [];
+
+// const randomNum = (arr) => {
+//   for (let i = 0; i < 100; i++) {
+//     arr[i] = Math.floor(Math.random() * 100 + 1);
+//   }
+//   arr.sort((a, b) => a - b);
+// };
+
+// const game = () => {
+//   for (let i = 0; i < arr.length; i++) {
+//     let result = arr[i].toString();
+//     let str = "";
+//     for (let j = 0; j < result.length; j++) {
+//       if (result.indexOf("3") || result.indexOf("6") || result.indexOf("9")) {
+//         str += "짝";
+//       } else {
+//         str += result.charAt(j);
+//       }
+//     }
+//     console.log(str);
+//   }
+// };
+// randomNum(arr);
+// game();
+
+// for (let i = 0; i < 110; i++) {
+//   let str = "" + (i + 1);
+//   for (let j = 0; j < str.length; j++) {
+//     if (str[j] == 3 || str[j] == 6 || str[j] == 9) {
+//       str = "짝";
+//     }
+//   }
+//   console.log(str);
+// }
