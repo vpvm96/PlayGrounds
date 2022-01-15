@@ -468,3 +468,53 @@
 //   }
 //   console.log(str);
 // }
+
+// for (let i = 0; i <= 110; i++) {
+//   let str = "" + (i + 1);
+//   for (let j = 0; j < str.length; j++) {
+//     if (str[j] == 3 || str[j] == 6 || str[j] == 9) {
+//       str = "짝";
+//     }
+//   }
+//   console.log(str);
+// }
+
+const randomArr = [];
+
+const randomNum = (randomArr) => {
+  for (let i = 0; i < 10; i++) {
+    randomArr[i] = Math.floor(Math.random() * 10) + 1;
+  }
+  console.log(randomArr);
+
+  let max = randomArr[0];
+  let maxIndex = 0;
+
+  for (let i = 1; i < randomArr.length; i++) {
+    if (max < randomArr[i]) {
+      max = randomArr[i];
+      maxIndex = i;
+    }
+  }
+
+  let min = randomArr[0];
+  let minIndex = 0;
+
+  for (let i = 1; i < randomArr.length; i++) {
+    if (min > randomArr[i]) {
+      min = randomArr[i];
+      minIndex = i;
+    }
+  }
+};
+
+const swap = (a, b, randomArr) => {
+  let swapNum = a;
+  a = b;
+  b = swapNum;
+  console.log(`바뀔 숫자는 : ${randomArr[a]}  ${randomArr[b]}`);
+
+  return;
+};
+
+randomNum(swap(maxIndex, minIndex, randomArr));

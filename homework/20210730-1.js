@@ -19,25 +19,47 @@
 //     }if (i = 0; i < 10; i++)
 // }
 // ----------------------------------------------------------------------------------------------
+
 const randomArr = [];
 
 const randomNum = (randomArr) => {
+  // 랜덤숫자 출력
   for (let i = 0; i < 1000; i++) {
-    randomArr[i] = Math.floor(Math.random() * 50 + 1);
+    randomArr[i] = Math.floor(Math.random() * 50) + 1;
   }
-  randomArr.sort((a, b) => a - b);
+};
+
+const sort = (randomArr) => {
+  // 랜덤숫자 정렬
+  for (let i = 0; i < randomArr.length; i++) {
+    for (let j = i + 1; j < randomArr.length; j++) {
+      let swap;
+      if (randomArr[j] < randomArr[i]) {
+        swap = randomArr[j];
+        randomArr[j] = randomArr[i];
+        randomArr[i] = swap;
+      }
+    }
+  }
+};
+
+const sameNum = (randomArr) => {
+  // 중복숫자 제거
+  const set = Array.from(new Set(randomArr));
+  return set;
 };
 
 const count = (randomArr) => {
+  // 1~10 까지 카운터
   let cnt = 0;
   for (let i = 0; i < randomArr.length; i++) {
-    if (randomArr[i] < 10) {
+    if (randomArr[i] <= 10) {
       cnt++;
     }
   }
-  console.log(`결과: 10보다 작은 수의 갯수 : ${cnt}개 입니다.`);
+  console.log(`결과: 10보다 작은 수의 갯수 :${cnt}개 입니다.`);
 };
 
 randomNum(randomArr);
-count(randomArr);
-// ---------------------------------------------------------------------------------------------
+sort(randomArr);
+count(sameNum(randomArr));
