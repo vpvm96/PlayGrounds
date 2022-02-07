@@ -20,4 +20,5 @@ const add = (randomArr) => {
   return num;
 };
 
+randomNum();
 console.log(add(randomArr));

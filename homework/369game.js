@@ -9,12 +9,15 @@
 // }
 // game()
 
-for (let i = 0; i < 110; i++) {
-  let str = "" + (i + 1);
-  for (let j = 0; j < str.length; j++) {
-    if (str[j] == 3 || str[j] == 6 || str[j] == 9) {
-      str = "짝";
+const game = () => {
+  for(let i = 0; i < 100; i++) {
+    let str = "" + (i + 1);
+    for(let j = 0; j < str.length; j++) {
+      if(str[j] == 3 || str[j] == 6 || str[j] == 9) {
+        str = "짝";
+      }
     }
+    console.log(str);
   }
-  console.log(str);
 }
+game();

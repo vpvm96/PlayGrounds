@@ -22,14 +22,17 @@
 // }
 // console.log(solution());
 
-function solution(n) {
-  var answer = "";
-  for (let i = 0; i < n; i++) {
-    if (n % i == 1) {
+const solution = () => {
+  let answer = "";
+
+  for(let i = 1; i < 100; i++) {
+    if(i % 2 === 1) {
       answer += "수";
-    } else {
+    }else {
       answer += "박";
     }
   }
   return answer;
 }
+
+console.log(solution());

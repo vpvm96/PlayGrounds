@@ -479,42 +479,17 @@
 //   console.log(str);
 // }
 
-const randomArr = [];
+// function solution() {
+//   let answer = [];
+//   let arr = [1, 1, 3, 3, 0, 1, 1];
 
-const randomNum = (randomArr) => {
-  for (let i = 0; i < 10; i++) {
-    randomArr[i] = Math.floor(Math.random() * 10) + 1;
-  }
-  console.log(randomArr);
+//   for (let i = 0; i < arr.length; i++) {
+//     if (arr[i - 1] !== arr[i]) {
+//       answer.push(arr[i]);
+//     }
+//   }
+//   return answer;
+// }
+// console.log(solution());
 
-  let max = randomArr[0];
-  let maxIndex = 0;
 
-  for (let i = 1; i < randomArr.length; i++) {
-    if (max < randomArr[i]) {
-      max = randomArr[i];
-      maxIndex = i;
-    }
-  }
-
-  let min = randomArr[0];
-  let minIndex = 0;
-
-  for (let i = 1; i < randomArr.length; i++) {
-    if (min > randomArr[i]) {
-      min = randomArr[i];
-      minIndex = i;
-    }
-  }
-};
-
-const swap = (a, b, randomArr) => {
-  let swapNum = a;
-  a = b;
-  b = swapNum;
-  console.log(`바뀔 숫자는 : ${randomArr[a]}  ${randomArr[b]}`);
-
-  return;
-};
-
-randomNum(swap(maxIndex, minIndex, randomArr));
