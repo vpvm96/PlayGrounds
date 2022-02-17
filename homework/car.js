@@ -38,7 +38,9 @@ class Car {
   }
 
   getCharge() {
-    for (this.oil = 0; this.oil <= 100; this.oil++) console.log(`충전된 기름 ${this.oil}`);
+    for(this.oil = 0; this.oil <= 100; this.oil++) {
+      console.log(`충전된 기름 ${this.oil}`);
+    }
   }
 }
 
