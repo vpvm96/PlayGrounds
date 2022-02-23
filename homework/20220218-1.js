@@ -37,6 +37,21 @@ console.log(solution(num, operator));
 
 // 11 | 11 팰린드롬 121  제한사항 : for문은 1개만
 
+let s="789987";
+
+function solution(s) {
+  for(let i = 0; i < s.length / 2; i++) {
+    let left = s[i];
+    let right = s[s.length -1 -i];
+    if(left !== right) {
+      return false;
+    }
+  }
+  return true;
+}
+
+console.log(solution(s));
+
 /**
  * A: 119
  * B: 119-12345
