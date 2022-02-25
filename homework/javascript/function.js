@@ -151,3 +151,22 @@ const simpleMultiply = (a, b) => {
 // Fun quiz time
 // function calculate(command, a, b)
 // command: add, substract, divide, multyply, remainder
+
+function calculate(op, a, b) {
+  switch (op) {
+    case '+':
+      return a + b;
+    case '-':
+      return a - b;
+    case '*':
+      return a * b;
+    case '/':
+      return a / b;
+    case '%':
+      return a % b;
+    default:
+      throw Error('Unknown operator');
+  }
+}
+
+console.log(calculate('+', 2, 3));
