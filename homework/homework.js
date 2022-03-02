@@ -27,10 +27,10 @@
 
 // const result = new Calculator(5, 10);
 
-// console.log(`+ :${result.add()}`);
-// console.log(`- :${result.subtract()}`);
-// console.log(`* :${result.multiply()}`);
-// console.log(`/ :${result.divide()}`);
+// console.log(`${result.a} + ${result.b} = ${result.getAdd()}`);
+// console.log(`${result.a} - ${result.b} = ${result.getSubtract()}`);
+// console.log(`${result.a} * ${result.b} = ${result.getMultiply()}`);
+// console.log(`${result.a} / ${result.b} = ${result.getDivide()}`);
 // console.log(`/ :${new Calculator(5, 10).add()}`);
 
 /**
@@ -87,14 +87,3 @@ const students = new Students(50, 70, 90);
 const teacher = new Teacher(students.getKorean(), students.getEnglish(), students.getMath());
 
 console.log(teacher.calculator())
-
-
-// const gugudna = () => {
-//   for(let i = 1; i <= 9; i++) {
-//     for(let j = 1; j <= 9; j++) {
-//       console.log(`${i} * ${j} = ${i * j}`);
-//     }
-//   }
-// }
-
-// gugudna();

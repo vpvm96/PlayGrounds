@@ -492,16 +492,18 @@
 // }
 // console.log(solution());
 
-Object.prototype.objCustom = function () {};
-Array.prototype.arrCustom = function () {};
+// Object.prototype.objCustom = function () {};
+// Array.prototype.arrCustom = function () {};
 
-let iterable = [3, 5, 7];
-iterable.foo = "hello";
+// let iterable = [3, 5, 7];
+// iterable.foo = "hello";
 
-for(let key in iterable) {
-  console.log(key);
-}
+// for(let key in iterable) {
+//   console.log(key);
+// }
 
-for(let value of iterable) {
-  console.log(value);
-}
+// for(let value of iterable) {
+//   console.log(value);
+// }
+
+

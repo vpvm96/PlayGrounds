@@ -56,4 +56,39 @@ console.log('age' in ellie);
 console.log('random' in ellie);
 console.log(ellie.random);
 
-// 6. for
+// 6. for ...in vs for ...of 
+// for(ket in obj)
+console.clear();
+for(key in ellie) {
+  console.log(key);
+}
+
+// for(value of iterable)
+const arr = [1, 2, 4, 5];
+for(value of arr) {
+  console.log(value);
+}
+
+// 7. Fun cloning
+// Object.assing(dest, [obj1, obj2, obj3...])
+const user = {name: 'ellie', age: 20};
+const user2 = user;
+console.log(user);
+
+// old way
+const user3 = {};
+for(key in user) {
+  user3[key] = user[key];
+}
+console.clear();
+console.log(user3);
+
+const user4 = Object.assign({}, user);
+console.log(user4);
+
+// another example
+const fruit1 = { color: 'red' };
+const fruit2 = { color: 'blue', size: 'big' };
+const mixed = Object.assign({}, fruit1, fruit2);
+console.log(mixed, color);
+console.log(mixed, size);

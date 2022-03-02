@@ -22,6 +22,8 @@
 // }
 // console.log(solution());
 
+// 1 ~ 100까지 숫자중 홀수의 경우 "수" 짝수의 경우 "박"을 출력
+
 const solution = () => {
   let answer = "";
 
