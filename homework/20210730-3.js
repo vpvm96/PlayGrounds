@@ -103,3 +103,21 @@ randomNum(randomArr);
 
 // randomNum(randomArr);
 // swapNum(maxNum(randomArr), minNum(randomArr));
+
+// 내장함수를 사용하여 작성하는 법.
+// const randomArr = [];
+
+// const randomNum = (randomArr) => {
+//   for(let i = 0; i < 10; i++) {
+//     randomArr[i] = Math.floor(Math.random() * 10) + 1;
+//   }
+//   max = Math.max(...randomArr);
+//   min = Math.min(...randomArr);
+
+//   let swap = max;
+//   max = min;
+//   min = swap;
+//   console.log(`${max} 와 ${min}`);
+// }
+
+// randomNum(randomArr);
