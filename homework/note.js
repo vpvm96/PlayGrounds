@@ -506,3 +506,111 @@
 //   console.log(value);
 // }
 
+/**
+ * JSON
+ * user : {
+ *  name: abc
+ *  password: 1234
+ * }
+ * 객체로 던져준 경우
+ * JSON -> Front Object
+ * js -> Object FoxMon = { naeme : 'foxmon', password: '1234' }
+ * Foxmon['name']
+ * user['name']
+ * user = JSON.stringfy(obj)
+ * axios.post(JSON.parse(user))
+ * axios, async await, Promise -> 비동기
+ * user['name']
+ * 
+ * 문서화
+ * Data table에 대한 문서화로 관리했음.
+ * db설계가 안되면 문서화도 안되니까 작업도 밀렸음?
+ * front 작업 -> HTML CSS
+ * TestData
+ * user : {
+ *  name: abc
+ *  password: 1234
+ * }
+ * 서로간의 막히는 부분이 있으면 서로 잘 조율한다.
+ * 
+ * Notion -> JSON API
+ */
+
+// const testData = {
+//   user: {
+//     id: {
+//     },
+//     username: {
+//     },
+//     password: { 
+//     }
+//   }
+// }
+
+
+// testData.user = {
+//   id: {
+//   },
+//   username: {
+//   },
+//   password: { 
+//   }
+// }
+
+// testData.products = {
+//   name: {
+//   },
+//   price: {
+//   }
+// }
+
+// const arr = Array(100).fill().map((v,i)=> i+1); 배열에 1 ~ 100까지 넣는 방법1.
+// const arr = Array.from(Array(100).keys()); 배열에 0 ~ 99 까지 넣는 방법2.
+
+{
+  // 소수 출력하기 
+  function isPrime(n) {
+    var divisor = 2;
+    while (n > divisor) {
+      if (n % divisor === 0) {
+        return false;
+      } else {
+        divisor++;
+      }
+    } if(n === 1) return false; 
+    return true;
+  }
+
+  console.log(isPrime(9));
+}
+
+{
+  // 문자열 거꾸로 출력하기
+  function reverse(str) {
+    var reverStr = "";
+    for(var i = str.length - 1; i >= 0; i--) {
+      reverStr = reverStr + str.charAt(i);
+    } return reverStr;
+  }
+  console.log(reverse("Hello"));
+}
+
+{
+  var dice = Math.floor(Math.random() * 6) + 1;
+  console.log(dice);
+}
+
+function timesTable(n) {
+  for(var i = 1; i <= 9; i++) {
+      console.log(n + "x" + i + "=" + n * i)
+  }
+}
+
+timesTable(2); // 2단만 출력
+timesTable(3); // 3단만 출력
+
+{
+  console.log("(\\_/)")
+  console.log("(.  .)");
+  console.log("|\\ /|");
+}

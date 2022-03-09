@@ -18,7 +18,7 @@ console.log(a / b);
 console.log(a % b);
 
 //4. 두 수 비교하기
-
+{
 let a = 5;
 let b = 5;
 
@@ -29,9 +29,9 @@ if (a > b) {
 } else if (a == b) {
   console.log("=");
 }
-
+}
 //5. 시험 성적
-
+{
 let score = 100;
 
 if (score >= 90 && score <= 100) {
@@ -47,11 +47,13 @@ if (score >= 90 && score <= 100) {
 } else {
   console.log("F");
 }
+}
 
 //6. 구구단
-
+{
 let a = 2;
 
 for (let i = 1; i <= 9; i++) {
   console.log(" 2" + " x" + i + " =" + a * i);
+}
 }
