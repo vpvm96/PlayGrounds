@@ -3,10 +3,22 @@
 // LinkedList<Integer> arr = new LinkedList<>();
 // Tree, 완전탐색, DFS
 
-// 소수찾기 1 초과 숫자중에 나누어 떨어지는게 1과 자기자신 (숙제)
-// 2, 3, 5, 7, 11
-let arr = [8, 3, 10, 11, 1, 5, 2, 99, 81, 100];
-let end = 0;
+{
+  // 소수 출력하기 
+  function isPrime(n) {
+    var divisor = 2;
+    while (n > divisor) {
+      if (n % divisor === 0) {
+        return false;
+      } else {
+        divisor++;
+      }
+    } if(n === 1) return false; 
+    return true;
+  }
+
+  console.log(isPrime(9));
+}
 
 // const print = () => {
 //   if (end == 10) {
