@@ -567,50 +567,29 @@
 // const arr = Array(100).fill().map((v,i)=> i+1); 배열에 1 ~ 100까지 넣는 방법1.
 // const arr = Array.from(Array(100).keys()); 배열에 0 ~ 99 까지 넣는 방법2.
 
-{
-  // 소수 출력하기 
-  function isPrime(n) {
-    var divisor = 2;
-    while (n > divisor) {
-      if (n % divisor === 0) {
-        return false;
-      } else {
-        divisor++;
-      }
-    } if(n === 1) return false; 
-    return true;
-  }
-
-  console.log(isPrime(9));
-}
 
 {
-  // 문자열 거꾸로 출력하기
-  function reverse(str) {
-    var reverStr = "";
-    for(var i = str.length - 1; i >= 0; i--) {
-      reverStr = reverStr + str.charAt(i);
-    } return reverStr;
-  }
-  console.log(reverse("Hello"));
-}
-
-{
-  var dice = Math.floor(Math.random() * 6) + 1;
-  console.log(dice);
-}
-
 function timesTable(n) {
   for(var i = 1; i <= 9; i++) {
       console.log(n + "x" + i + "=" + n * i)
   }
 }
-
 timesTable(2); // 2단만 출력
 timesTable(3); // 3단만 출력
+}
 
 {
-  console.log("(\\_/)")
-  console.log("(.  .)");
-  console.log("|\\ /|");
+  var korean = 7000;
+  var discountKorean = korean - (korean * (10 / 100));
+
+  console.log(discountKorean);
+}
+
+{
+  var fruits = ['사과', '오렌지', '딸기', '콩', '무'];
+
+  fruits = fruits.filter((element) => element !== '콩');
+  fruits = fruits.filter((element) => element !== '무');
+
+  console.log(fruits);
 }
