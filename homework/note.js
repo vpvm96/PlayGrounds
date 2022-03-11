@@ -527,9 +527,10 @@
  * db설계가 안되면 문서화도 안되니까 작업도 밀렸음?
  * front 작업 -> HTML CSS
  * TestData
- * user : {
+ * user = {
  *  name: abc
  *  password: 1234
+ *  email: dadfasf@naver.com
  * }
  * 서로간의 막히는 부분이 있으면 서로 잘 조율한다.
  * 
@@ -568,28 +569,74 @@
 // const arr = Array.from(Array(100).keys()); 배열에 0 ~ 99 까지 넣는 방법2.
 
 
-{
-function timesTable(n) {
-  for(var i = 1; i <= 9; i++) {
-      console.log(n + "x" + i + "=" + n * i)
-  }
-}
-timesTable(2); // 2단만 출력
-timesTable(3); // 3단만 출력
-}
+// {
+// function timesTable(n) {
+//   for(var i = 1; i <= 9; i++) {
+//       console.log(n + "x" + i + "=" + n * i)
+//   }
+// }
+// timesTable(2); // 2단만 출력
+// timesTable(3); // 3단만 출력
+// }
 
-{
-  var korean = 7000;
-  var discountKorean = korean - (korean * (10 / 100));
+// {
+//   var korean = 7000;
+//   var discountKorean = korean - (korean * (10 / 100));
 
-  console.log(discountKorean);
-}
+//   console.log(discountKorean);
+// }
 
-{
-  var fruits = ['사과', '오렌지', '딸기', '콩', '무'];
+// {
+//   var fruits = ['사과', '오렌지', '딸기', '콩', '무'];
 
-  fruits = fruits.filter((element) => element !== '콩');
-  fruits = fruits.filter((element) => element !== '무');
+//   // fruits = fruits.filter((element) => element !== '콩');
+  // fruits = fruits.filter((element) => element !== '무');
+  
+//   var f = [];
+//   for(let i = 0; i < fruits.length; i++) {
+//     if(fruits[i] == '콩' || fruits[i] == '무') {
+//       continue
+//     } else {
+//       f.push(fruits[i])
+//     }
+//   }
+  
+  
+//   console.log(f);
+// }
 
-  console.log(fruits);
-}
+// import Lodash from 'lodash'
+
+// const obj = {
+//   1: "ㅎㅇ",
+//   2: "hihi",
+//   3: "hello"
+// };
+
+// const key = Object.keys(obj)
+// key.forEach(k => console.log(obj[k]))
+// Object.keys(obj).forEach(k => console.log(obj[k]))
+
+// Lodash.each(obj, (key, value) => {
+//   console.log(key)
+//   console.log(value)
+// })
+// let r = Lodash.find(obj, (value)=> value === 'ㅎㅇ')
+// console.log(r)
+
+// const readline = require("readline");
+
+// const rl = readline.createInterface({
+//   input: process.stdin,
+//   output: process.stdout,
+// });
+// let input = []
+
+// rl.on("line", function (line) {
+//   input = line.split(' ');
+//   rl.close();
+// }).on("close", function () {
+//     console.log(input[0]);
+//     console.log(input[1]);
+//     console.log(input[2]);
+// });

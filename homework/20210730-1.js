@@ -42,7 +42,7 @@ const sort = (randomArr) => {
     }
   }
 };
-
+// 1: value 1: value2 2 3 4 5
 const sameNum = (randomArr) => {
   // 중복숫자 제거
   const set = Array.from(new Set(randomArr));

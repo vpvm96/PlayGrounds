@@ -1,0 +1,23 @@
+{
+  "name": "playgrounds",
+  "version": "1.0.0",
+  "description": "Coding Play Grounds",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vpvm96/PlayGrounds.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vpvm96/PlayGrounds/issues"
+  },
+  "homepage": "https://github.com/vpvm96/PlayGrounds#readme",
+  "dependencies": {
+    "lodash": "^4.17.21"
+  }
+}
