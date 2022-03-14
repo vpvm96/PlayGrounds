@@ -640,3 +640,124 @@
 //     console.log(input[1]);
 //     console.log(input[2]);
 // });
+
+/**엘리스는 다음과 같은 조건을 충족하는 암호를 만들려고 합니다.
+
+아래의 1, 2, 3, 4의 조건을 동시에 충족하는 경우 또는 5, 6, 7의 조건을 동시에 충족하는 경우 true를 아니라면 false를 출력합니다.
+
+a는 b보다 작거나 같다.
+a는 d와 같다.
+b는 c보다 크다.
+c는 6보다 작다.
+a는 b와 같다.
+a는 c와 같다.
+a는 d와 같다. */
+
+// function password (a, b, c, d) {
+// let flag = true;
+
+// if(a < b && a === d && b > c && c < 6) {
+//   flag = true;
+// }else if (a === b && a === c && a === d) {
+//   flag = true;
+// }else {
+//   flag = false;
+// }
+// return flag;
+// }
+
+// console.log(password(4, 6, 8, 3));
+
+// {
+// let num = 0;
+
+// function solution (num) {
+//   for(let i = 0; i < num.length; i++) {
+//     if(num % 2 === 0) {
+//       let answer = num;
+//       return answer;
+//     }
+//   } 
+// }
+
+// console.log(solution(120));
+// }
+
+// {
+//   let num = 20;
+
+//   // 베열 -> 10 -> 0 ~~~ 9
+//   // 문자열 "이상원" -> ['이', '상', '원'] =  let str
+//   // str[0] 이
+// function game () {
+//   for(let i = 1; i <= num; i++) {
+//     let str = (i + "");
+//     let flag = false;
+//     for(let j = 0; j < str.length; j++) {
+//       if(str[j] == "3" || str[j] == "6" || str[j] == "9" ) {
+//         str = "짝!";
+//         flag =true;
+//         console.log(str);
+//       }
+//     }
+//     if (flag == false) {
+//       console.log(str);
+//     }
+//   }
+// }
+// game();
+// }
+
+// {
+// let steersman = 3;
+// let safety = 2;
+
+// let answer = Math.floor(safety / steersman * 1000) / 1000;
+//   for(let i = 0; i < answer.length; i++) {
+//     if (answer === i) {
+//       console.log(`${i}할`);
+//     } else if (answer === [2]) {
+//       console.log(`${i}푼`);
+//     } else if (answer === [3]) {
+//       console.log(`${i}리`);
+//     }
+//   }
+//   console.log(answer);
+// }
+
+// {
+//   let str = "12qwe34asf45";
+
+//   let answer = str.replace(/[^0-9]/g,'');
+//   console.log(answer);
+// }
+
+// {
+//   let answer = 0;
+
+// for(let i = 1; i < 100; i++) {
+//   if(i % 2 === 0) {
+//     answer = i;
+//     console.log(answer);
+//   }
+// }
+// }
+
+{
+  var scores = {
+    "kor": 55,
+    "mat": 75,
+    "eng": 50
+}
+
+let num = scores.map((scores) => scores);
+
+console.log(num);
+function check () {
+  let average = 0;
+  for(let i = 0; i < scores; i++) {
+    
+  }
+}
+check();
+}
