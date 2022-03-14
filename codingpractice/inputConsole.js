@@ -14,17 +14,75 @@ rl.on('line', function (line) {
     process.exit();
 });
 
-// 값 입력 받기.
+// 한줄 입력 받기.
 
 rl.on("line", (line) => {
     console.log(line)
     rl.close();
 });
 
+rl.on('close', () => {
+    process.exit();
+})
+
 // rl.on('close', () => {
 //     console.log(myInput);
 // })
 
+// 공백을 기준으로 값 입력받기
+{
+let input = [];
+
+rl.on('line', (line) => {
+  input = line.split(' ').map(el => parseInt(el)); // 1 2 3 4
+  rl.close();
+});
+
+rl.on('close', () => {
+  input.forEach(el => {
+    console.log(el);
+  })
+  process.exit();
+})
+
+//입력
+// 1 2 3
+//출력
+// 1
+// 2
+// 3
+}
+
+// 여러 줄 입력받기
+{
+  const readline = require("readline");
+
+const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout,
+});
+
+let input = []
+
+rl.on("line", (line) => {
+    input.push(line);
+});
+
+rl.on('close', () => {
+    console.log(input);
+    process.exit();
+})
+
+// 입력
+// 1
+// 2
+// a
+// b
+
+
+// 출력 
+// ['1', '2', 'a', 'b']
+}
 // 여러 줄 입출력 처리하기
 
 var count = 0; // 몇 번째 입력인지 기록
@@ -61,7 +119,7 @@ rl.on("line", function (x) {
     input.push(x);
   }
   if (count > N) {
-    // N번 입력을 받은 뒤 종료
+    // N번 입력을 받은 뒤 종료 
     rl.close();
   }
 }).on("close", function () {

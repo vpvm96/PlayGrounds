@@ -32,17 +32,17 @@ console.log(solution(complete, player));
   console.log(solution(complete, player));
 }
 
-{
-let complete = ['Adam', 'John', 'Jenny'];
-let player = ['Adam', 'John', 'Jenny', 'Adele'];
+// {
+// let complete = ['Adam', 'John', 'Jenny'];
+// let player = ['Adam', 'John', 'Jenny', 'Adele'];
 
-function solution2(complete, player) {
-  let answer;
-  if(complete !== player) {
-    answer.push(player);
-  }
-  return answer;
-}
+// function solution2(complete, player) {
+//   let answer;
+//   if(complete !== player) {
+    
+//   }
+//   return answer;
+// }
 
-console.log(solution2(complete, player));
-}
+// console.log(solution2(complete, player));
+// }
