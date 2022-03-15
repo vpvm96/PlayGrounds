@@ -547,6 +547,16 @@ Copy
 Tips!
 두 줄에 걸쳐 입력을 받는 방법을 고민해보세요. 간단한 방법으로는 입력되는 line을 배열에 추가하여, 배열의 길이가 2가 되면 rl.close();를 하는 방법입니다.
  */
+let striker = 0;
+let safe = 0;
+
+function solution (a, b) {
+  let steersman = Math.floor((b / a) * 1000) / 1000
+  console.log(steersman);
+}
+
+solution(3, 2);
+
 }
 
 {
@@ -641,6 +651,27 @@ console.log(check());
 }
 
 {
+  /**13번 문제.
+   * 짝수 판별기
+1부터 100까지의 자연수 중에서 짝수만을 출력하는 짝수 판별기를 만들어봅시다.
+
+
+지시사항
+반복문과 조건문을 이용해 1이상 100이하의 숫자 중 짝수를 웹 화면에 출력해보세요. 단, 출력한 숫자들 사이에는 공백이 있어서는 안 됩니다.
+실행 결과
+출력 결과의 일부입니다.
+   */
+let answer = 0;
+
+for(let i = 1; i <= 100; i++) {
+  if(i % 2 === 0) {
+    answer = i;
+    document.write(answer);
+  }
+}
+}
+
+{
   /**14번 문제
    * 점심 메뉴 찾기
 배열에 최근 먹은 음식들이 [점심, 저녁, 점심, 저녁, …] 순으로 들어가 있습니다.
@@ -669,4 +700,81 @@ for(let i = 0; i < foods.length; i++) {
     document.write(answer)
   }
 }
+}
+
+{
+  /**15번 문제.
+   * B로 시작하는 과일을 찾아줘
+주어진 배열 fruits에서 b로 시작하는 과일은 몇 개인지 구해봅시다.
+
+
+지시사항
+주어진 배열 fruits에서 b로 시작하는 과일은 몇 개인지 반복문과 조건문을 사용해 구하고
+아래와 같이 웹 화면에 출력되도록 구해봅시다.
+b로 시작하는 과일은 2개
+Copy
+Hint
+indexOf는 문자열에서 찾고자하는 문자의 index 정보를 알 수 있는 메소드
+b로 시작하는 과일은 b의 index가 0으로 시작하겠죠?
+   */
+const fruits = ['apple', 'banana', 'orange', 'blueberry', 'strawberry']
+var sum = 0; // b로 시작하는 과일의 개수를 저장하는 변수
+
+for(let i = 0; i < fruits.length; i++) {
+  if(fruits[i].indexOf('b') === 0) {
+    sum++;
+  }
+}
+
+document.write(`b로 시작하는 과일은 ${sum}개`);
+/*지시사항을 따라 작성해주세요*/
+}
+
+{
+  /**16번 문제.
+   * 특정 학생 정보 바꾸기
+학생들 중 elice라는 학생이 전과를 하게 되었습니다. elice의 전공 정보를 전과할 과의 이름으로 수정해봅시다.
+
+학생들의 정보를 담고 있는 students객체를 수정하여 문제를 해결해봅시다.
+
+
+지시사항
+‘elice’ 라는 이름을 가진 학생을 찾아 기존 전공을 새로운 전공인 ‘computer science’ 로 바꿔주세요.
+
+그리고 웹 화면에 students 정보를 아래 실행 결과와 같이 출력해 제대로 수정되었는지 확인해봅시다.
+
+실행 결과
+image
+   */
+  /*지시사항에 따라 작성해주세요.*/
+const students = [
+  {
+      name: 'john',
+      studentId: 2020123456,
+      major: 'business'
+  },
+  {
+      name: 'elice',
+      studentId: 2015111111,
+      major: 'statistics'
+  },
+  {
+      name: 'jennifer',
+      studentId: 2017000000,
+      major: 'visual design'
+  }
+]
+
+for(let i = 0; i < students.length; i++) {
+  let answer = students[i].name
+  if(answer === "elice") {
+    students[i].major = 'computer science';
+  }
+  document.write(students[i].name +"'s " + "major: " + students[i].major + "<br/>")
+}
+
+/*1. elice를 찾아 전공을 'computer science'로 바꿔주세요.*/
+
+
+/*2. 웹 화면에 students 정보를 출력해 제대로 수정되었는지 확인해보세요.*/
 }

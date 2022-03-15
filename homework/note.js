@@ -743,21 +743,45 @@ a는 d와 같다. */
 // }
 // }
 
-{
-  var scores = {
-    "kor": 55,
-    "mat": 75,
-    "eng": 50
-}
+// {
+//   var scores = {
+//     "kor": 55,
+//     "mat": 75,
+//     "eng": 50
+// }
 
-let num = scores.map((scores) => scores);
+// let num = scores.map((scores) => scores);
 
-console.log(num);
-function check () {
-  let average = 0;
-  for(let i = 0; i < scores; i++) {
+// console.log(num);
+// function check () {
+//   let average = 0;
+//   for(let i = 0; i < scores; i++) {
     
-  }
-}
-check();
-}
+//   }
+// }
+// check();
+// }
+
+// const arr = [1, 3, 5, 6, 7, 8];
+
+// const sum = arr.reduce((a, b) => a + b) / arr.length;
+
+// console.log(sum);
+
+// let num = 8;
+
+// for(let i = 0; i <= num; i++) {
+//   if(num % i === 0) {
+//     console.log(i);
+//   }
+// }
+
+
+const str = '사과 딸기 오렌지 콩 무';
+
+const fruits = str.split(" ");
+
+fruits = fruits.filter(e => e !== "콩");
+fruits = fruits.filter(e => e !== "무")
+
+console.log(fruits);
