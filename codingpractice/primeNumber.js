@@ -20,6 +20,26 @@
   console.log(isPrime(9));
 }
 
+{
+  function solution (a, b) {
+    let answer = [];
+    let num = b;
+    for (let i = a; i <= num; i++) {
+      let cnt = 0;
+      for (let j = 1; j <= i; j++) {
+        if (i % j === 0) {
+          cnt++;
+        }
+      }
+      if (cnt == 2) {
+        answer.push(i);
+      }
+    }
+    return answer;
+  }
+  console.log(solution(2, 50));
+}
+
 // const print = () => {
 //   if (end == 10) {
 //     return;

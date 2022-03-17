@@ -776,12 +776,106 @@ a는 d와 같다. */
 //   }
 // }
 
+/**
+ * let 초코칩 = "촉촉한 초코칩"
+ * 안 촉축한 초코칩은 맛있다 촉촉한 초코칩
+ * 촉죽한 초코칩
+ */
 
-const str = '사과 딸기 오렌지 콩 무';
+// let choco = "촉촉한 초코칩";
+// let test = "안 촉축한 초코칩은 맛있다 촉촉한 초코칩"
+// let strLen = choco.length;
+// let cnt = 0;
 
-const fruits = str.split(" ");
+// for(let i = 0; i < test.length; i++) {
+//   if(test[i] == "촉") {
+//     let j = i;
+//     if(test.substring(j, strLen + j).length < test.length) {
+//       let comp = test.substring(j, strLen + j)
+//       if(comp === choco) {
+//         cnt++;
+//       }
+//     }
+//   }
+// }
 
-fruits = fruits.filter(e => e !== "콩");
-fruits = fruits.filter(e => e !== "무")
+// let str = "I have a money"
+// let arr = [];
 
-console.log(fruits);
+// arr = str.split(" ");
+
+// let result = "";
+// for(let i = 0; i < arr.length; i++) {
+//   result += arr[i];
+// }
+
+// let answer = [];
+
+// for(let i = 0; i < result.length; i+=2) {
+//   let count = "";
+//   let len = i + 2;
+//   len = len > result.length ? result.length : len
+//   for(let j = i; j < len; j++) {
+//     count += result[j] 
+//   }
+//   answer.push(count);
+// }
+
+// answer.forEach(e => {
+//   console.log(e)
+// })
+
+// function solution (a, b) {
+//   let answer = [];
+//   let num = b;
+//   for(let i = a; i <= num; i++) {
+//     let cnt = 0;
+//     for(let j = 1; j <= i; j++) {
+//       if(i % j === 0) {
+//         cnt++;
+//       }
+//     }
+//     if(cnt == 2) {
+//       answer.push(i)
+//     }
+//   }
+//   return answer;
+// }
+
+// console.log(solution(2, 50));
+
+
+// {
+// // 40 3
+// let str = "I have a money";
+// let result = "";
+
+// function solution () {
+//   let split = "";
+//   split = str.split(" ");
+
+//   for(let i = 0; i < split.length; i++) {
+//     result += split[i];
+//   }
+
+//   let answer = [];
+
+//   for(let i = 0; i < result.length; i+=2) {
+//     let length = i + 2;
+//     length = length > result.length ? result.length : length;
+//     let count = "";
+
+//     for(let j = i; j < length; j++) {
+//       count += result[j];
+//     }
+
+//     answer.push(count);
+//   }
+  
+//   answer.map((item) => console.log(item));
+// }
+
+// solution();
+// }
+
+

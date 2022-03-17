@@ -115,7 +115,8 @@ rl.on('line', (line) => {
 조건에 맞는 암호
 엘리스는 다음과 같은 조건을 충족하는 암호를 만들려고 합니다.
 
-아래의 1, 2, 3, 4의 조건을 동시에 충족하는 경우 또는 5, 6, 7의 조건을 동시에 충족하는 경우 true를 아니라면 false를 출력합니다.
+아래의 1, 2, 3, 4의 조건을 동시에 충족하는 경우 
+또는 5, 6, 7의 조건을 동시에 충족하는 경우 true를 아니라면 false를 출력합니다.
 
 a는 b보다 작거나 같다.
 a는 d와 같다.
@@ -331,9 +332,12 @@ let str = "";
 {
   /**7번 문제
    * 피보나찌 수열 출력하기
-피보나찌 수열은 첫째 및 둘째 항이 1이며 그 뒤의 모든 항은 바로 앞 두 항의 합인 수열입니다. 처음 여섯 항은 각각 1, 1, 2, 3, 5, 8이다. 편의상 0번째 항을 0으로 두겠습니다.
+피보나찌 수열은 첫째 및 둘째 항이 1이며 그 뒤의 모든 항은 바로 앞 두 항의 합인 수열입니다. 
+처음 여섯 항은 각각 1, 1, 2, 3, 5, 8이다. 편의상 0번째 항을 0으로 두겠습니다.
 
-여기서 저희는 0번째 항부터 세어 주겠습니다. 어떤 수 n(자연수)을 입력받았을 때 피보나찌 수열 내 가장 큰 수가 n미만인 배열을 출력하는 문제입니다. 어떤 파이썬 내용을 적용해야 할지를 고민하면 쉽게 풀릴 수 있습니다.
+여기서 저희는 0번째 항부터 세어 주겠습니다. 
+어떤 수 n(자연수)을 입력받았을 때 피보나찌 수열 내 가장 큰 수가 n미만인 배열을 출력하는 문제입니다. 
+어떤 파이썬 내용을 적용해야 할지를 고민하면 쉽게 풀릴 수 있습니다.
 
 이 프로그램의 입력 예시와 출력 예시는 다음과 같습니다.
 
@@ -361,7 +365,8 @@ Copy
 자연수를 입력받습니다.
 n보다 작은 수들의 피보나찌 수열을 출력하세요. 피보나찌 수열의 첫 번째 항은 0, 두 번째 항은 1입니다.
 Tips
-피보나찌 수열을 구현하는 방법은 n번째 항을 위해선 n-1, n-2번째 항을 더해주는 방법입니다. 이는 -1, -2 인덱스의 원소를 더하여 쉽게 구할 수 있습니다.
+피보나찌 수열을 구현하는 방법은 n번째 항을 위해선 n-1, n-2번째 항을 더해주는 방법입니다. 
+이는 -1, -2 인덱스의 원소를 더하여 쉽게 구할 수 있습니다.
 n보다 작은 수들의 피보나찌 수열들의 리스트들을 만들기 위해선 마지막 두 개 인덱스의 원소의 합이 n을 넘어가면 안 돼요!
 반복문을 중간에 종료하기 위해서 break를 이용하세요.
    */
@@ -385,7 +390,7 @@ rl.on('line', function(line) {
     result = a + b;
     input.push(result);
     a = b;
-    b = result;
+    b = result; 
   }
   console.log(input);
 }); // 이건 틀림
@@ -412,7 +417,8 @@ Copy
 Copy
 입력 예시 2
 
-안 촉촉한 초코칩 나라에 살던 안 촉촉한 초코칩이 촉촉한 초코칩 나라의 촉촉한 초코칩을 보고 촉촉한 초코칩이 되고 싶어서 촉촉한 초코칩 나라에 갔는데 촉촉한 초코칩 나라의 문지기가 "넌 촉촉한 초코칩이 아니고 안 촉촉한 초코칩이니까 안 촉촉한 초코칩 나라에서 살아"라고 해서 안 촉촉한 초코칩은 촉촉한 초코칩이 되는 것을 포기하고 안 촉촉한 초코칩 나라로 돌아갔다네
+안 촉촉한 초코칩 나라에 살던 안 촉촉한 초코칩이 촉촉한 초코칩 나라의 촉촉한 초코칩을 보고 촉촉한 초코칩이 되고 싶어서
+촉촉한 초코칩 나라에 갔는데 촉촉한 초코칩 나라의 문지기가 "넌 촉촉한 초코칩이 아니고 안 촉촉한 초코칩이니까 안 촉촉한 초코칩 나라에서 살아"라고 해서 안 촉촉한 초코칩은 촉촉한 초코칩이 되는 것을 포기하고 안 촉촉한 초코칩 나라로 돌아갔다네
 Copy
 출력 예시 2
 
@@ -439,8 +445,9 @@ rl.on('line', function(line) {
   str = line;
   rl.close();
 }).on('close', function() {
+  // 안 촉촉한 초코칩은 맛있다 촉촉한 초코칩
   let answer = str.split('촉촉한 초코칩')
-  console.log(answer.length - 1);  
+  console.log(answer.length - 1); 
 })
 }
 
@@ -547,16 +554,21 @@ Copy
 Tips!
 두 줄에 걸쳐 입력을 받는 방법을 고민해보세요. 간단한 방법으로는 입력되는 line을 배열에 추가하여, 배열의 길이가 2가 되면 rl.close();를 하는 방법입니다.
  */
-let striker = 0;
-let safe = 0;
+
+let result = "";
+let safe = "할푼리"
 
 function solution (a, b) {
-  let steersman = Math.floor((b / a) * 1000) / 1000
-  console.log(steersman);
+  let num = Math.floor(b / a * 1000) + '';
+  for(let i = 0; i < num.length; i++) {
+    if(num[i] != "0") {
+      result += num[i] + safe[i];
+    }
+  }
+  console.log(result);
 }
 
 solution(3, 2);
-
 }
 
 {
@@ -633,21 +645,18 @@ var scores = {
   "mat": 75,
   "eng": 50
 }
+let average = 0;
+let result = "";
 
-let average = scores.kor + scores.mat + scores.eng / 3;
-let subject = scores.find((scores) => scores);
-
-function check () {
-  if(subject < 40) {
-    console.log('fail');
-  } else if (average < 60) {
-    console.log('fail');
-  } else if (subject > 40 && average > 60) {
-    console.log('pass');
+for(let key in scores) {
+  average += (scores[key] / Object.keys(scores).length);
+  if(scores[key] < 40 || average < 60) {
+    result = "fail";
+  } else if (scores[key] >= 40 && average >= 60) {
+    result = "pass";
   }
 }
-
-console.log(check());
+console.log(result);
 }
 
 {
