@@ -879,3 +879,16 @@ a는 d와 같다. */
 // }
 
 
+let num = 8;
+
+// for(let i = 1; i <= num; i++) {
+//   if(num % i === 0) {
+//     console.log(i);
+//   }
+// }
+
+let result = num.map((item) => {
+  if(num % item === 0) {
+    console.log(num);
+  }
+})

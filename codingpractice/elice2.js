@@ -42,7 +42,7 @@ let rain = 0;
 rl.on('line', function (rain) {
     if (rain >= 50) {
         console.log('우산을 챙긴다.')
-    } else if (rain < 50) {
+    } else {
         console.log('그냥 간다.')
     }
   })

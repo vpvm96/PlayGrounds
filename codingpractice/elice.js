@@ -515,11 +515,12 @@ let lyrics = words.join(' ');
 console.log(lyrics);
 
 let count = 0;
-for(let i = 0; i < lyrics.length; i++) {
-    if(lyrics[i] === 'p') {
-        count++;
-    }
-}
+count = lyrics.match(/p/g).length;
+// for(let i = 0; i < lyrics.length; i++) {
+//     if(lyrics[i] === 'p') {
+//         count++;
+//     }
+// }
 console.log(count);
 }
 
