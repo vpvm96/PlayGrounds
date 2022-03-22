@@ -164,7 +164,7 @@ console.clear();
   let money = '500원, 엘리스 토끼는 하루 용돈으로 500원. 단돈 500원을 받는다. 부모님이 주시는 500원. 하지만 잘못한 것이 있으면 500원을 받지 못한다.'
 
   let result = money.split("500원");
-  console.log(result.length);
+  console.log(result.length -1);
 }
 
 {
@@ -369,4 +369,33 @@ console.clear();
     console.log(answer);
   }
   solution('12#qWe34%asf@!45')
+}
+
+{
+  // 할푼리
+
+  let result = "";
+  let safe = "할푼리";
+
+  function solution(a, b) {
+  let num = Math.floor(b / a * 1000) + "";
+  for(let i = 0; i < num.length; i++) {
+    if(num[i] != "0") {
+      result += num[i] + safe[i];
+    }
+  }
+  console.log(result);
+  }
+
+  solution(3, 2);
+}
+
+{
+  const fruits = ['apple', 'banana', 'orange', 'blueberry', 'strawberry']
+  let sum = 0;
+
+  for(let i = 0; i < fruits.length; i++) {
+    fruits.filter((item) => item == "b" ? sum++ : sum);
+  }
+  console.log(sum);
 }

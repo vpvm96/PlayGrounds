@@ -879,16 +879,12 @@ a는 d와 같다. */
 // }
 
 
-let num = 8;
+// let fruits = "사과 오렌지 딸기 콩 무";
+// let del = "콩 무";
 
-// for(let i = 1; i <= num; i++) {
-//   if(num % i === 0) {
-//     console.log(i);
-//   }
-// }
+// fruits = fruits.split(" ").map(item => item);
+// fruits = fruits.filter((item) => !del.includes(item));
 
-let result = num.map((item) => {
-  if(num % item === 0) {
-    console.log(num);
-  }
-})
+// console.log(fruits);
+
+
