@@ -887,4 +887,106 @@ a는 d와 같다. */
 
 // console.log(fruits);
 
+{ // bubble sort
+  function solution() {
+    let arr = [8, 3, 10, 11, 1, 5, 2, 99, 81, 100];
+    for (let i = 0; i < arr.length; i++) {
+      for (let j = i + 1; j < arr.length; j++) {
+        let swap;
+        if (arr[j] < arr[i]) {
+          swap = arr[j];
+          arr[j] = arr[i];
+          arr[i] = swap;
+        }
+      }
+    }
+    return arr;
+  }
+}
 
+{ // Revers String
+  function solution() {
+    let str = 'Hello';
+    let reverStr = '';
+    for (let i = str.length - 1; i >= 0; i--) {
+      reverStr += str.charAt(i);
+    }
+    return reverStr;
+  }
+}
+
+{ // isPrime
+  function solution() {
+    let divisor = 2;
+    while (n > divisor) {
+      if (n % divisor === 0) {
+        return false;
+      } else {
+        divisor++;
+      }
+    } if (n === 1) return false;
+    return true;
+  }
+}
+
+{ // isPrime2
+  function solution(a, b) {
+    let answer = [];
+    let num = b;
+    for (let i = a; i <= num; i++) {
+      let cnt = 0;
+      for (let j = 1; j <= i; j++) {
+        if (i % j === 0) {
+          cnt++;
+        }
+      }
+      if (cnt == 2) {
+        answer.push(i);
+      }
+    } return answer;
+  }
+  console.log(solution(2, 50));
+}
+
+{ // Money
+  function solution(str) {
+    let arr = str.split(' ');
+    let result = '';
+    for (let i = 0; i < arr.length; i++) {
+      result += arr[i];
+    }
+    let answer = [];
+    for (let i = 0; i < result.length; i+=2) {
+      let count = '';
+      let len = i + 2;
+      len = len > result.length ? result.length : len;
+      for (let j = i; j < len; j++) {
+        count += result[j];
+      }
+      answer.push(count);
+    }
+    answer.map(item => console.log(item));
+  }
+  cosnole.log(solution('I have a money'));
+}
+
+{ // 차집합(Difference) ! 하나만 빼면 교집합(intersection)
+  function solution() {
+    let complete = ['Adam', 'John', 'Jenny'];
+    let player = ['Adam', 'John', 'Jenny', 'Adele'];
+    let answer = [];
+    answer = player.filter(x => !complete.includes(x));
+    return answer;
+  }
+  console.log(solution());
+}
+
+{ // JSON.stringify 를 이용한 방법
+  function solution() {
+    let complete = ['Adam', 'John', 'Jenny'];
+    let player = ['Adam', 'John', 'Jenny', 'Adele'];
+    let answer = [];
+    answer = JSON.stringify(player) === JSON.stringify(complete);
+  }
+  console.log(solution());
+}
