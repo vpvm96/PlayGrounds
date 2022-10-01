@@ -4,10 +4,8 @@
 
 let song = "동해물과 백두산이 마르고 닳도록. 하느님이 보우하사 우리 나라만세."
 
-function solution(song) {
-  let answer = 0;
-  answer = song.split("이").length - 1;
-  return answer;
+function solution (song) {
+  return song.split("이").length - 1
 }
 
 console.log(solution(song));
