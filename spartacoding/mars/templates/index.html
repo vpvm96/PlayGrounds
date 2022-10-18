@@ -69,18 +69,35 @@
           url: "/mars",
           data: {},
           success: function (response) {
-            alert(response["msg"])
+            const rows = response["orders"]
+            rows.forEach((item) => {
+              const name = item.name
+              const address = item.address
+              const size = item.size
+
+              const temp_html = `<tr>
+                                    <td>${name}</td>
+                                    <td>${address}</td>
+                                    <td>${size}</td>
+                                </tr>`
+              $("#order-box").append(temp_html)
+            })
           },
         })
       }
 
       function save_order() {
+        const name = $("#name").val()
+        const address = $("#address").val()
+        const size = $("#size").val()
+
         $.ajax({
           type: "POST",
           url: "/mars",
-          data: { sample_give: "데이터전송" },
+          data: { name_give: name, address_give: address, size_give: size },
           success: function (response) {
             alert(response["msg"])
+            window.location.reload()
           },
         })
       }
@@ -125,23 +142,7 @@
             <th scope="col">평수</th>
           </tr>
         </thead>
-        <tbody>
-          <tr>
-            <td>홍길동</td>
-            <td>서울시 용산구</td>
-            <td>20평</td>
-          </tr>
-          <tr>
-            <td>임꺽정</td>
-            <td>부산시 동구</td>
-            <td>10평</td>
-          </tr>
-          <tr>
-            <td>세종대왕</td>
-            <td>세종시 대왕구</td>
-            <td>30평</td>
-          </tr>
-        </tbody>
+        <tbody id="order-box"></tbody>
       </table>
     </div>
   </body>
